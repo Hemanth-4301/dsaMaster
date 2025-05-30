@@ -29,16 +29,17 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   const navLinks = [
-    { to: "/", label: "Home" },
+    { to: "/#hero", label: "Home" },
+    { to: "/todo", label: "Todo" },
     { to: "/about", label: "About" },
   ];
 
   return (
-    <nav className="bg-black shadow-sm py-3 px-4 sm:px-6 fixed w-full top-0 z-50 transition-colors duration-200">
+    <nav className="bg-slate-900 shadow-sm py-3 px-4 sm:px-6 fixed w-full top-0 z-50 transition-colors duration-200">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-white">
           <Code size={28} className="text-white" />
-          <span className="text-xl font-bold">dark DSA</span>
+          <span className="text-sm md:text-xl font-bold">dark DSA</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -69,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         <div className="flex items-center space-x-4 md:hidden">
-          <div className="text-xs font-medium text-gray-700 dark:text-gray-300">
+          <div className="text-xs font-medium text-white">
             <span className="mr-1">Progress:</span>
             <span className="text-primary-600 dark:text-primary-400 font-bold">
               {totalSolved}/{totalQuestions}

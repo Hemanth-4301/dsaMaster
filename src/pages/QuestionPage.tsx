@@ -162,12 +162,12 @@ const QuestionPage: React.FC = () => {
         <div className="space-y-8">
           <div>
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Brute Force Approach</h2>
-            <CodeTabs solution={question.bruteForce} title="Brute Force Solution" />
+            <CodeTabs solution={question.bruteForce}  />
           </div>
           
           <div>
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Optimal Approach</h2>
-            <CodeTabs solution={question.optimal} title="Optimal Solution" />
+            <CodeTabs solution={question.optimal} />
           </div>
         </div>
       </motion.div>

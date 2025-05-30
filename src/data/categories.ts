@@ -4,6 +4,18 @@ import { stringsQuestions } from "./strings";
 import { slidingWindowQuestions } from "./slidingWindow";
 import { stackQuestions } from "./stack";
 import { binarySearchQuestions } from "./binarySearch";
+import { linkedListQuestions } from "./linkedList";
+import { heapQuestions } from "./heaps";
+import { backTrackingQuestions } from "./backtracking";
+import { trieQuestions } from "./tries";
+import { treeQuestions } from "./trees";
+import { graphQuestions } from "./graph";
+import { dp1Questions } from "./1dp";
+import { dp2Questions } from "./2dp";
+import { greedyQuestions } from "./greedy";
+import { bitQuestions } from "./bits";
+import { twoPointerQuestions } from "./twoPointers";
+import { matrixQuestions } from "./matrix";
 
 export const categories: Category[] = [
   {
@@ -13,6 +25,13 @@ export const categories: Category[] = [
       "Fundamental data structure for storing collections of elements",
     icon: "List",
     questions: arraysQuestions,
+  },
+  {
+    id: "two-pointers",
+    name: "Two Pointers",
+    description: "Technique for solving problems with two indices",
+    icon: "Pointer",
+    questions: twoPointerQuestions,
   },
   {
     id: "strings",
@@ -47,71 +66,66 @@ export const categories: Category[] = [
     name: "Linked List",
     description: "Linear data structure with nodes connected by pointers",
     icon: "Link",
-    questions: [],
+    questions: linkedListQuestions,
   },
-  {
-    id: "binary-tree",
-    name: "Binary Tree",
-    description: "Tree with at most two children per node",
-    icon: "GitBranch",
-    questions: [],
-  },
+
   {
     id: "heap",
     name: "Heap / Priority Queue",
     description: "Special tree-based data structure",
     icon: "TreePine",
-    questions: [],
+    questions: heapQuestions,
   },
+
   {
     id: "backtracking",
     name: "Backtracking",
     description:
       "Algorithm for finding all solutions by exploring all potential paths",
     icon: "Undo2",
-    questions: [],
+    questions: backTrackingQuestions,
+  },
+  {
+    id: "binary-tree",
+    name: "Binary Tree",
+    description: "Tree with at most two children per node",
+    icon: "GitBranch",
+    questions: treeQuestions,
   },
   {
     id: "trie",
     name: "Trie",
     description: "Specialized tree for efficient string operations",
     icon: "Network",
-    questions: [],
+    questions: trieQuestions,
   },
   {
     id: "graph",
     name: "Graph",
     description: "Collection of nodes connected by edges",
     icon: "Network",
-    questions: [],
+    questions: graphQuestions,
   },
   {
     id: "dp-easy",
     name: "Dynamic Programming I",
     description: "Fundamental DP problems and patterns",
     icon: "Braces",
-    questions: [],
+    questions: dp1Questions,
   },
   {
     id: "dp-hard",
     name: "Dynamic Programming II",
     description: "Advanced DP problems and techniques",
     icon: "Braces",
-    questions: [],
+    questions: dp2Questions,
   },
   {
     id: "greedy",
     name: "Greedy",
     description: "Algorithms that make locally optimal choices",
     icon: "Zap",
-    questions: [],
-  },
-  {
-    id: "intervals",
-    name: "Intervals",
-    description: "Problems involving ranges or intervals",
-    icon: "Milestone",
-    questions: [],
+    questions: greedyQuestions,
   },
   {
     id: "matrix",
@@ -125,7 +139,14 @@ export const categories: Category[] = [
     name: "Bit Manipulation",
     description: "Operations on binary representations of numbers",
     icon: "Binary",
-    questions: [],
+    questions: bitQuestions,
+  },
+  {
+    id: "miscellaneous",
+    name: "Miscellaneous",
+    description: "Other important topics and algorithms",
+    icon: "PuzzlePiece",
+    questions: matrixQuestions,
   },
 ];
 
