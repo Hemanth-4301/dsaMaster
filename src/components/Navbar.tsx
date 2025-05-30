@@ -30,6 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { to: "/#hero", label: "Home" },
+    { to: "/chatbot", label: "Chatbot" },
     { to: "/todo", label: "Todo" },
     { to: "/about", label: "About" },
   ];
@@ -106,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                     location.pathname === link.to
                       ? "text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 rounded"
-                      : "text-gray-700 dark:text-gray-300"
+                      : "text-white dark:text-white"
                   }`}
                   onClick={closeMenu}
                 >

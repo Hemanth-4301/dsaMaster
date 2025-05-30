@@ -67,12 +67,13 @@ function AppContent() {
             <Route path="/question/:questionId" element={<QuestionPage />} />
             <Route path="/todo" element={<Todo />} />
             <Route path="/about" element={<About />} />
+            <Route path="/chatbot" element={<Chatbot />} />
           </Routes>
         </AnimatePresence>
       </main>
-      <section id="chatbot" className="p-2 md:p-6 lg:p-12 pb-12">
+      {/* <section id="chatbot" className="p-2 md:p-6 lg:p-12 pb-12">
         {location.pathname !== "/about" && <Chatbot />}
-      </section>
+      </section> */}
       <Footer />
     </div>
   );

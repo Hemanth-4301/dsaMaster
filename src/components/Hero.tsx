@@ -135,7 +135,7 @@ const Hero: React.FC<HeroProps> = ({ totalSolved, totalQuestions }) => {
 
               {/* Right section - Progress */}
               <motion.div
-                className="flex-shrink-0 relative animate-bounce w-full max-w-xs mx-auto lg:mx-0"
+                className="flex-shrink-0 relative animate-bounce w-full max-w-xs mx-auto lg:mx- mt-10 md:mt-12 "
                 variants={itemVariants}
               >
                 <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto">

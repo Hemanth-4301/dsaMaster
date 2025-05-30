@@ -82,7 +82,7 @@ const About = () => {
         >
           <motion.div variants={itemVariants} className="relative inline-block">
             <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 dark:from-white dark:via-purple-200 dark:to-white bg-clip-text text-transparent mb-6">
-              About darkDSA
+              darkDSA
             </h1>
             <motion.div
               animate={{ rotate: 360 }}
@@ -101,62 +101,15 @@ const About = () => {
               <div className="w-full h-full bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-full animate-pulse"></div>
             </div>
           </motion.div>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            Transform your coding journey with the most comprehensive and
-            interactive DSA learning platform
-          </motion.p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Swapped the order of these two divs to move right content to left */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="space-y-8"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.2 },
-                }}
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-white/30 dark:from-gray-800/50 dark:to-gray-700/30 rounded-2xl blur-sm group-hover:blur-none transition-all duration-300"></div>
-                <div className="relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm p-6 rounded-2xl border border-white/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-start space-x-4">
-                    <motion.div
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
-                      className={`p-4 bg-gradient-to-r ${feature.gradient} rounded-2xl shadow-lg`}
-                    >
-                      <feature.icon size={28} className="text-white" />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative lg:order-2"
           >
             {/* Decorative elements around the main card */}
             <motion.div
@@ -233,6 +186,46 @@ const About = () => {
                 ))}
               </div>
             </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-8 lg:order-1"
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 },
+                }}
+                className="group relative"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-white/30 dark:from-gray-800/50 dark:to-gray-700/30 rounded-2xl blur-sm group-hover:blur-none transition-all duration-300"></div>
+                <div className="relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm p-6 rounded-2xl border border-white/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <motion.div
+                      whileHover={{ rotate: 360, scale: 1.1 }}
+                      transition={{ duration: 0.5 }}
+                      className={`p-4 bg-gradient-to-r ${feature.gradient} rounded-2xl shadow-lg`}
+                    >
+                      <feature.icon size={28} className="text-white" />
+                    </motion.div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
 
