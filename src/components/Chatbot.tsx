@@ -348,7 +348,7 @@ const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="px-2 mt-20 lg:p-24">
+    <div className="px-2 mt-18 lg:p-24">
       <div className="flex  flex-col h-full bg-gradient-to-br from-violet-400/20 via-purple-300/20 to-indigo-400/20 dark:from-violet-600/30 dark:via-purple-500/30 dark:to-indigo-600/30 backdrop-blur-3xl rounded-2xl overflow-hidden border border-white/30 dark:border-white/20 shadow-2xl relative">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-pink-400/10 via-purple-400/10 to-cyan-400/10 dark:from-pink-500/20 dark:via-purple-500/20 dark:to-cyan-500/20 "></div>
@@ -364,9 +364,6 @@ const Chatbot: React.FC = () => {
               <h2 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-300 dark:to-purple-300 bg-clip-text text-transparent">
                 AI Assistant
               </h2>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                Powered by Gemini
-              </p>
             </div>
           </div>
           <button

@@ -178,8 +178,8 @@ const CategoryPage: React.FC = () => {
           />
         </div>
 
-        <div className="flex space-x-4">
-          <div className="relative">
+        <div className="flex space-x-4 overflow-x-auto">
+          <div className="relative ">
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value as FilterOption)}

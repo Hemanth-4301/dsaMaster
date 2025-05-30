@@ -41,7 +41,7 @@ const About = () => {
       icon: Code,
       title: "Comprehensive DSA Learning",
       description:
-        "Master Data Structures and Algorithms through our curated collection of 141 essential problems covering all fundamental concepts.",
+        "Learn Data Structures and Algorithms through our curated collection of 141 essential problems covering all fundamental concepts.",
       color: "blue",
       gradient: "from-blue-400 to-cyan-400",
     },

@@ -78,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({ totalSolved, totalQuestions }) => {
                   className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-xl leading-relaxed"
                   variants={itemVariants}
                 >
-                  Master the most important algorithms and ace your technical
+                  Practice the most important algorithms and ace your technical
                   interviews with our curated collection of {totalQuestions - 3}
                   + essential problems.
                 </motion.p>

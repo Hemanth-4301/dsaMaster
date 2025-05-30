@@ -55,7 +55,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl blur opacity-0 group-hover:opacity-20 transition duration-300" />
 
       <div className="relative backdrop-blur-xl bg-white/40 dark:bg-gray-900/40 rounded-xl shadow-lg overflow-hidden border border-white/20 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:border-white/30 dark:hover:border-gray-600/50">
-        <Link to={`/category/${category.id}`} className="block h-full">
+        <Link to={`/category/${category.id}/#category`} className="block h-full">
           {/* Subtle gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-gray-800/10" />
 

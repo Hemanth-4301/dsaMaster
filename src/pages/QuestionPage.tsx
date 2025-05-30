@@ -162,7 +162,7 @@ const QuestionPage: React.FC = () => {
         </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 ">
             Problem Description
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -180,11 +180,11 @@ const QuestionPage: React.FC = () => {
                     key={index}
                     className="bg-gray-100 dark:bg-gray-700 p-4 rounded-md"
                   >
-                    <div className="mb-2">
+                    <div className="mb-2 overflow-x-auto">
                       <span className="font-mono font-medium text-gray-800 dark:text-gray-200">
                         Input:{" "}
                       </span>
-                      <span className="font-mono text-gray-700 dark:text-gray-300">
+                      <span className="font-mono text-gray-700 dark:text-gray-300 ">
                         {example.input}
                       </span>
                     </div>
