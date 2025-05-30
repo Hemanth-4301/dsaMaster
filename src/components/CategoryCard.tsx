@@ -1,20 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import * as Icons from 'lucide-react';
-import ProgressBar from './ProgressBar';
-import { Category } from '../types/Question';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import * as Icons from "lucide-react";
+import ProgressBar from "./ProgressBar";
+import { Category } from "../types/Question";
 
 interface CategoryCardProps {
   category: Category;
   solvedCount: number;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ category, solvedCount }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({
+  category,
+  solvedCount,
+}) => {
   const IconComponent = (Icons as any)[category.icon] || Icons.File;
-  
+
   const totalQuestions = category.questions.length;
-  const progress = totalQuestions > 0 ? (solvedCount / totalQuestions) * 100 : 0;
+  const progress =
+    totalQuestions > 0 ? (solvedCount / totalQuestions) * 100 : 0;
 
   return (
     <motion.div
@@ -31,11 +35,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, solvedCount }) =>
               {category.name}
             </h3>
           </div>
-          
+
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 h-12">
             {category.description}
           </p>
-          
+
           <div className="mt-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">

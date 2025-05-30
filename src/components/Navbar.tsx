@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Code, Github, Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import DarkModeToggle from './DarkModeToggle';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Code, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import DarkModeToggle from "./DarkModeToggle";
 
 interface NavbarProps {
   darkMode: boolean;
@@ -11,7 +11,12 @@ interface NavbarProps {
   totalQuestions: number;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, totalSolved, totalQuestions }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  darkMode,
+  toggleDarkMode,
+  totalSolved,
+  totalQuestions,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -24,16 +29,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, totalSolved, 
   };
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
   ];
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-sm py-3 px-4 sm:px-6 fixed w-full top-0 z-50 transition-colors duration-200">
+    <nav className="bg-black shadow-sm py-3 px-4 sm:px-6 fixed w-full top-0 z-50 transition-colors duration-200">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2 text-primary-600 dark:text-primary-400">
-          <Code size={28} className="text-primary-500" />
-          <span className="text-xl font-bold">DSA Master</span>
+        <Link to="/" className="flex items-center space-x-2 text-white">
+          <Code size={28} className="text-white" />
+          <span className="text-xl font-bold">dark DSA</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -41,41 +46,24 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, totalSolved, 
             <Link
               key={link.to}
               to={link.to}
-              className={`text-sm font-medium transition-colors duration-200 ${
+              className={`text-md font-medium transition-colors duration-200 ${
                 location.pathname === link.to
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                  ? "text-white"
+                  : "text-white hover:text-primary-600 dark:hover:text-primary-400"
               }`}
               onClick={closeMenu}
             >
               {link.label}
             </Link>
           ))}
-          
-          <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
+
+          <div className="text-md font-medium text-white">
             <span className="mr-1">Progress:</span>
-            <span className="text-primary-600 dark:text-primary-400 font-bold">
-              {totalSolved}/{totalQuestions}
+            <span className="text-white font-bold">
+              <span className="text-primary-400">{totalSolved}</span>/
+              {totalQuestions}
             </span>
           </div>
-
-          <a
-            href="https://neetcode.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-          >
-            NeetCode
-          </a>
-
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-          >
-            <Github size={20} />
-          </a>
 
           <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
@@ -87,9 +75,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, totalSolved, 
               {totalSolved}/{totalQuestions}
             </span>
           </div>
-          
+
           <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          
+
           <button
             onClick={toggleMenu}
             className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 focus:outline-none"
@@ -104,7 +92,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, totalSolved, 
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden mt-4 py-2 overflow-hidden"
@@ -116,33 +104,14 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, totalSolved, 
                   to={link.to}
                   className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                     location.pathname === link.to
-                      ? 'text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 rounded'
-                      : 'text-gray-700 dark:text-gray-300'
+                      ? "text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800 rounded"
+                      : "text-gray-700 dark:text-gray-300"
                   }`}
                   onClick={closeMenu}
                 >
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="https://neetcode.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300"
-                onClick={closeMenu}
-              >
-                NeetCode
-              </a>
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center space-x-2"
-                onClick={closeMenu}
-              >
-                <Github size={16} />
-                <span>GitHub</span>
-              </a>
             </div>
           </motion.div>
         )}
