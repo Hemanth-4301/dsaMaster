@@ -348,7 +348,7 @@ const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="px-2 mt-18 lg:p-24">
+    <div className="px-2 mt-18 lg:p-24 overflow-x-auto">
       <div className="flex  flex-col h-full bg-gradient-to-br from-violet-400/20 via-purple-300/20 to-indigo-400/20 dark:from-violet-600/30 dark:via-purple-500/30 dark:to-indigo-600/30 backdrop-blur-3xl rounded-2xl overflow-hidden border border-white/30 dark:border-white/20 shadow-2xl relative">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-pink-400/10 via-purple-400/10 to-cyan-400/10 dark:from-pink-500/20 dark:via-purple-500/20 dark:to-cyan-500/20 "></div>
