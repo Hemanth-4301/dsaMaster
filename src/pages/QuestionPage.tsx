@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Star, CheckCircle, Circle } from "lucide-react";
 import CodeTabs from "../components/CodeTabs";
-import { categories } from "../data/categories";
+import { categories } from "../../public/data/categories";
 import { Question } from "../types/Question";
 import {
   getQuestionStatus,

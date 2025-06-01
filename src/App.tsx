@@ -16,7 +16,7 @@ import {
   toggleDarkMode,
   getTotalSolvedQuestions,
 } from "./utils/localStorage";
-import { totalQuestions } from "./data/categories";
+import { totalQuestions } from "../public/data/categories";
 import Todo from "./components/Todo";
 import Chatbot from "./components/Chatbot";
 import About from "./components/About";

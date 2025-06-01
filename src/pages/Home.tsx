@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Hero from '../components/Hero';
-import CategoryCard from '../components/CategoryCard';
-import { categories, totalQuestions } from '../data/categories';
-import { getTotalSolvedQuestions, getQuestionStatus } from '../utils/localStorage';
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import Hero from "../components/Hero";
+import CategoryCard from "../components/CategoryCard";
+import { categories, totalQuestions } from "../../public/data/categories";
+import {
+  getTotalSolvedQuestions,
+  getQuestionStatus,
+} from "../utils/localStorage";
 
 const Home: React.FC = () => {
   const totalSolved = getTotalSolvedQuestions();
@@ -12,7 +15,7 @@ const Home: React.FC = () => {
   const getSolvedCountForCategory = (categoryId: string) => {
     const category = categories.find((c) => c.id === categoryId);
     if (!category) return 0;
-    
+
     return category.questions.filter((q) => getQuestionStatus(q.id)).length;
   };
 
@@ -40,7 +43,7 @@ const Home: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 pt-24">
       <Hero totalSolved={totalSolved} totalQuestions={totalQuestions} />
-      
+
       <motion.div
         className="mt-16"
         initial="hidden"
@@ -54,7 +57,7 @@ const Home: React.FC = () => {
         >
           DSA Categories
         </motion.h2>
-        
+
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}

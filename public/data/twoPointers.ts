@@ -1,5 +1,5 @@
 // src/data/twoPointers.ts
-import { Question } from "../types/Question";
+import { Question } from "../../src/types/Question";
 
 export const twoPointerQuestions: Question[] = [
   // ==================== MEDIUM ====================

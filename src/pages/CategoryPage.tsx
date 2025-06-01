@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Search, Filter, BookOpen } from "lucide-react";
 import QuestionCard from "../components/QuestionCard";
 import ProgressBar from "../components/ProgressBar";
-import { categories } from "../data/categories";
+import { categories } from "../../public/data/categories";
 import { Category, Difficulty, Question } from "../types/Question";
 import {
   getQuestionStatus,

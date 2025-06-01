@@ -1,5 +1,5 @@
 // src/data/arrays.ts
-import { Question } from "../types/Question";
+import { Question } from "../../src/types/Question";
 
 export const arraysQuestions: Question[] = [
   // Previous questions (1-5) would be here...
