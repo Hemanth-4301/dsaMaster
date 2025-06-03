@@ -20,7 +20,7 @@ import { totalQuestions } from "../public/data/categories";
 import Todo from "./components/Todo";
 import Chatbot from "./components/Chatbot";
 import About from "./components/About";
-import CS from "./components/Cs";
+import CS from "./components/CS";
 
 function AppContent() {
   const [darkMode, setDarkMode] = useState(true);
