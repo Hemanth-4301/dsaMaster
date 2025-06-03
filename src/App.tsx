@@ -20,6 +20,7 @@ import { totalQuestions } from "../public/data/categories";
 import Todo from "./components/Todo";
 import Chatbot from "./components/Chatbot";
 import About from "./components/About";
+import CS from "./components/Cs";
 
 function AppContent() {
   const [darkMode, setDarkMode] = useState(true);
@@ -67,6 +68,7 @@ function AppContent() {
             <Route path="/question/:questionId" element={<QuestionPage />} />
             <Route path="/todo" element={<Todo />} />
             <Route path="/about" element={<About />} />
+            <Route path="/cs" element={<CS />} />
           </Routes>
         </AnimatePresence>
       </main>
