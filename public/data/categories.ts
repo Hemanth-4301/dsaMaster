@@ -128,13 +128,6 @@ export const categories: Category[] = [
     questions: greedyQuestions,
   },
   {
-    id: "matrix",
-    name: "Matrix",
-    description: "2D grid problems and traversal techniques",
-    icon: "Grid",
-    questions: [],
-  },
-  {
     id: "bit-manipulation",
     name: "Bit Manipulation",
     description: "Operations on binary representations of numbers",
