@@ -30,7 +30,6 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { to: "/#hero", label: "Home" },
-    { to: "/cs", label: "CS" },
     { to: "/todo", label: "Todo" },
     { to: "/about", label: "About" },
   ];
